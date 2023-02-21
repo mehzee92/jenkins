@@ -10,10 +10,10 @@
   },
   "private": true,
   "scripts": {
-    "dev": "webpack --config webpack.config.js",
+    "dev": "node init && webpack --config webpack.config.js",
     "prod": "webpack --config webpack.config.js --mode=production",
-    "build": "yarn prod",
-    "start": "yarn dev --watch",
+    "build": "node init && yarn prod",
+    "start": "node init && yarn dev --watch",
     "lint:js": "eslint --config .eslintrc.js ../ --ext js && prettier --check ../",
     "lint:js-ci": "eslint --config .eslintrc.js ../ --ext js -f checkstyle -o target/eslint-warnings.xml && prettier --check ../",
     "lint:css": "stylelint src/main/less",
